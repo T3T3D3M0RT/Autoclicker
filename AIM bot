@@ -15,7 +15,8 @@ jobs:
           python-version: "3.12"
       - run: pip install pyinstaller
       - run: pyinstaller --onefile --noconsole autocliqueur.py
+      - run: pyinstaller --onefile --noconsole cible.py
       - uses: actions/upload-artifact@v4
         with:
-          name: autocliqueur-exe
-          path: dist/autocliqueur.exe
+          name: exe-files
+          path: dist/*.exe
